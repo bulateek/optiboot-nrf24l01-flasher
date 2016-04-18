@@ -20,8 +20,12 @@ static void flasher_tx_handle(void);
 #include "timer1.h"
 #include "uart.h"
 
-#define CE_DDR		DDRC
-#define CE_PORT		PORTC
+/* Extra pins configuration for nRF24L01. Here :
+ *  - CE  = PIN9  (PORTB1)
+ *  - CSN = PIN10 (PORTB2)
+ */
+#define CE_DDR		DDRB
+#define CE_PORT		PORTB
 #define CSN_DDR		DDRB
 #define CSN_PORT	PORTB
 #define CE_PIN		(1 << 1)
