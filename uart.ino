@@ -14,7 +14,7 @@
 #endif
 
 void serial_init(void) {
-#define BAUD_RATE 115200
+#define BAUD_RATE 57600
 	uint16_t baud = (F_CPU + BAUD_RATE * 4L) / (BAUD_RATE * 8L) - 1;
 
 	UBRR0H = baud >> 8;
